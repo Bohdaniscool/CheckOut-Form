@@ -10,6 +10,7 @@ const products = [
     name: 'Product 1',
     desc: 'A nice thing',
     price: '$9.99',
+    image: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZnudVWZJ8ILxWRtMYMPEneTXbzBZUbkRGQ&usqp=CAU" alt="name"> </img>,
   },
   {
     name: 'Product 2',
@@ -46,6 +47,7 @@ export default function Review() {
       <List disablePadding>
         {products.map((product) => (
           <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
+            {product.image}
             <ListItemText primary={product.name} secondary={product.desc} />
             <Typography variant="body2">{product.price}</Typography>
           </ListItem>
